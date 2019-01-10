@@ -13,8 +13,8 @@ from linebot.models import (
 
 app = Flask(__name__)
 
-line_bot_api = LineBotApi('YOUR_CHANNEL_ACCESS_TOKEN')
-handler = WebhookHandler('YOUR_CHANNEL_SECRET')
+line_bot_api = LineBotApi('exFmH2PrUuHfOvyb4iF/HZ59hFP0R0uIu0N9gPld1A2kgfPr/2lAHqxnCzsok79m2UxBOLe9UvIDN41keSCAA1NRfYpcPC9ZkUHvHd0vaRdUtbWSA0rwuzMT0rR9TS4qXZunW9gaWR5/BXDj4yvG1AdB04t89/1O/w1cDnyilFU=')
+handler = WebhookHandler('cba2b4b2e75c6d116878aa9b91825af4')
 
 
 @app.route("/callback", methods=['POST'])
