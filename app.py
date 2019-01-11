@@ -311,7 +311,9 @@ def handle_text_message(event):
             event.reply_token, TextSendMessage(text='Ini merupakan bot yang masih dalam proses pengembangan.'))
     else:
         line_bot_api.reply_message(
-            event.reply_token, TextSendMessage(text='Need help? type .help'))
+            event.reply_token, TextSendMessage(text='Need help? click this button .help', quick_reply=QuickReply(
+                    items=[
+                        QuickReplyButton(action=MessageAction(label="help", text=".help"))])))
 
 #TextSendMessage(text=event.message.text))
 
