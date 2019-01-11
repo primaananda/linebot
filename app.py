@@ -317,7 +317,7 @@ def handle_text_message(event):
         data = res.json()
         your_ip = data['ip']
         line_bot_api.reply_message(
-            event.reply_token, TextSendMessage(text=(data['ip'] + data['hostname'] + data['city'] + data['country'] + data['loc'] + data['org'])))
+            event.reply_token, TextSendMessage(text=('alamat IP : ' + data['ip'] + '\nhostname : ' + data['hostname'] + '\nKota : ' + data['city'] + '\nNegara : ' + data['country'] + '\nLokasi : ' + data['loc'] + '\nOrganisasi : ' + data['org'])))
     else:
         line_bot_api.reply_message(
             event.reply_token, TextSendMessage(text='Need help? click this button .help', quick_reply=QuickReply(
