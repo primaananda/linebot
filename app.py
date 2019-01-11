@@ -316,8 +316,9 @@ def handle_text_message(event):
     elif text == 'ip':
         res = request.get('https://ipinfo.io/')
         data = res.json()
+        your_ip = data['ip']
         line_bot_api.reply_message(
-            event.reply_token, TextSendMessage(text='your ip ' + data['ip']))
+            event.reply_token, TextSendMessage(text='your ip ', quick_reply=your_ip))
     else:
         line_bot_api.reply_message(
             event.reply_token, TextSendMessage(text='Need help? click this button .help', quick_reply=QuickReply(
