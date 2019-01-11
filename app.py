@@ -151,7 +151,6 @@ def handle_text_message(event):
         line_bot_api.reply_message(event.reply_token, template_message)
     elif text == 'imagemap':
         pass
-
     elif text == 'flex':
         bubble = BubbleContainer(
             direction='ltr',
@@ -314,11 +313,12 @@ def handle_text_message(event):
         line_bot_api.reply_message(
             event.reply_token, TextSendMessage(text='Ini merupakan bot yang masih dalam proses pengembangan.'))
     elif text == 'ip':
-        res = request.get('https://ipinfo.io/')
+        res = requests.get('https://ipinfo.io/')
         data = res.json()
         your_ip = data['ip']
         line_bot_api.reply_message(
-            event.reply_token, TextSendMessage(text=print(your_ip)))
+            event.reply_token, TextSendMessage(text=your_ip, quick_reply=QuickReply(items=[
+                        QuickReplyButton(action=MessageAction(label="ip", text=your_ip))])))
     else:
         line_bot_api.reply_message(
             event.reply_token, TextSendMessage(text='Need help? click this button .help', quick_reply=QuickReply(
