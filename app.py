@@ -48,10 +48,7 @@ def handle_message(event):
 		line_bot_api.reply_message(
 		event.reply_token,
 		TextSendMessage(text="HELOOO"))
-	elif '!ID' in msg:
-		line_bot_api.reply_message(
-		event.reply_token,
-		TextSendMessage(text=profile.user_id))
+	
 		
 	line_bot_api.reply_message(
 		event.reply_token,
