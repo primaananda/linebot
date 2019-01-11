@@ -52,11 +52,11 @@ def handle_message(event):
 	elif '.help' in msg:
 		line_bot_api.reply_message(
 		event.reply_token,
-		TextSendMessage(text="Berikut merupakan daftar command yang dapat dijalankan. \n 1. (.about) \n 2. (.help)"))
-	
-	line_bot_api.reply_message(
+		TextSendMessage(text="Berikut merupakan daftar command yang dapat dijalankan. \n 1) .about \n 2) .help"))
+	else:
+		line_bot_api.reply_message(
 		event.reply_token,
-		TextSendMessage(text='masukan command ".help"'))
+		TextSendMessage(text='masukan command ".help" untuk informasi command bot yang tersedia.'))
 	
 	#line_bot_api.reply_message(
 	#	event.reply_token,
