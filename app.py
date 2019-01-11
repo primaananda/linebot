@@ -32,16 +32,6 @@ from linebot.models import (
 
 app = Flask(__name__)
 
-# get channel_secret and channel_access_token from your environment variable
-#channel_secret = os.getenv('cba2b4b2e75c6d116878aa9b91825af4')
-#channel_access_token = os.getenv#('exFmH2PrUuHfOvyb4iF/HZ59hFP0R0uIu0N9gPld1A2kgfPr/2lAHqxnCzsok79m2UxBOLe9UvIDN41keSCAA1NRfYpcPC9ZkUHvHd0vaRdUtbWSA0rwuzMT0rR9TS4qXZunW9gaWR5/BXDj4yvG1AdB04t89/1O/w1cDnyilFU=')
-#if channel_secret is None:
-#    print('Specify LINE_CHANNEL_SECRET as environment variable.')
-#    sys.exit(1)
-#if channel_access_token is None:
-#    print('Specify LINE_CHANNEL_ACCESS_TOKEN as environment variable.')
-#    sys.exit(1)
-
 line_bot_api = LineBotApi('exFmH2PrUuHfOvyb4iF/HZ59hFP0R0uIu0N9gPld1A2kgfPr/2lAHqxnCzsok79m2UxBOLe9UvIDN41keSCAA1NRfYpcPC9ZkUHvHd0vaRdUtbWSA0rwuzMT0rR9TS4qXZunW9gaWR5/BXDj4yvG1AdB04t89/1O/w1cDnyilFU=')
 handler = WebhookHandler('cba2b4b2e75c6d116878aa9b91825af4')
 
@@ -81,7 +71,7 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_text_message(event):
-    text = event.message.text
+    text = (event.message.text).lower()
         
     if text == 'profile':
         if isinstance(event.source, SourceUser):
