@@ -4,6 +4,7 @@ import errno
 import os
 import sys
 import tempfile
+import requests
 from argparse import ArgumentParser
 
 from flask import Flask, request, abort
@@ -68,6 +69,8 @@ def callback():
         abort(400)
 
     return 'OK'
+
+
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_text_message(event):
@@ -299,16 +302,22 @@ def handle_text_message(event):
                         QuickReplyButton(action=MessageAction(label="flex", text="flex")),
                         QuickReplyButton(action=MessageAction(label="quick_reply", text="quick_reply")),
                         QuickReplyButton(action=MessageAction(label="info", text="info")),
-                        QuickReplyButton(action=MessageAction(label="quick_reply", text="about"))
+                        QuickReplyButton(action=MessageAction(label="about", text="about")),
+                        QuickReplyButton(action=MessageAction(label="your ip", text="ip"))
                     ]
                 )
             ))
     elif text == 'info':
         line_bot_api.reply_message(
             event.reply_token, TextSendMessage(text=''))
-    elif text == 'info':
+    elif text == 'about':
         line_bot_api.reply_message(
             event.reply_token, TextSendMessage(text='Ini merupakan bot yang masih dalam proses pengembangan.'))
+    elif text == 'ip':
+        res = request.get('https://ipinfo.io/')
+        data = res.json()
+        line_bot_api.reply_message(
+            event.reply_token, TextSendMessage(text='your ip ' + data['ip']))
     else:
         line_bot_api.reply_message(
             event.reply_token, TextSendMessage(text='Need help? click this button .help', quick_reply=QuickReply(
