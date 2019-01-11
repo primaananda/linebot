@@ -49,10 +49,18 @@ def handle_message(event):
 		line_bot_api.reply_message(
 		event.reply_token,
 		TextSendMessage(text="Berikut merupakan aplikasi BOT line yang sedang dikembangkan"))
-		
+	elif '.help' in msg:
+		line_bot_api.reply_message(
+		event.reply_token,
+		TextSendMessage(text="Berikut merupakan daftar command yang dapat dijalankan. \n 1. (.about) \n 2. (.help)"))
+	
 	line_bot_api.reply_message(
 		event.reply_token,
-		TextSendMessage(text=event.message.text))
+		TextSendMessage(text='masukan command ".help"'))
+	
+	#line_bot_api.reply_message(
+	#	event.reply_token,
+	#	TextSendMessage(text=event.message.text))
 
 if __name__ == "__main__":
 	port = int(os.environ.get('PORT', 5000))
