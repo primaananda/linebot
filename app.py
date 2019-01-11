@@ -282,9 +282,20 @@ def handle_text_message(event):
                             action=LocationAction(label="label6")
                         ),
                     ])))
+    elif text == '.help':
+        line_bot_api.reply_message(
+            event.reply_token, TextSendMessage(text='Berikut merupakan command yang terdapat pada BOT ini: \n 1) profile \n 2) bye \n 3) confirm \n 4) buttons \n 5) carousel \n 6) image carousel \n 7) imagemap \n 8) flex \n 9. quick_reply \n 10) info \n 11) about'))
+    elif text == 'info':
+        line_bot_api.reply_message(
+            event.reply_token, TextSendMessage(text=''))
+    elif text == 'info':
+        line_bot_api.reply_message(
+            event.reply_token, TextSendMessage(text='Ini merupakan bot yang masih dalam proses pengembangan.'))
     else:
         line_bot_api.reply_message(
-            event.reply_token, TextSendMessage(text=event.message.text))
+            event.reply_token, TextSendMessage(text='Need help? type .help'))
+
+#TextSendMessage(text=event.message.text))
 
 
 @handler.add(MessageEvent, message=LocationMessage)
