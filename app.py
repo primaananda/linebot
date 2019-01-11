@@ -48,7 +48,7 @@ def handle_message(event):
 	elif '.about' in msg:
 		line_bot_api.reply_message(
 		event.reply_token,
-		TextSendMessage(text="Berikut merupakan aplikasi BOT line yang sedang dikembangkan"))
+		TextSendMessage(text="ini merupakan aplikasi line BOT yang sedang dikembangkan."))
 	elif '.help' in msg:
 		line_bot_api.reply_message(
 		event.reply_token,
@@ -56,11 +56,13 @@ def handle_message(event):
 	else:
 		line_bot_api.reply_message(
 		event.reply_token,
-		TextSendMessage(text='masukan command ".help" untuk informasi command bot yang tersedia.'))
+		TextSendMessage(text='masukan command ".help" untuk informasi command bot yang tersedia.') + locationMessage.id + locationMessage.latitude + locationMessage.longitude)
+		
+	
 	
 	#line_bot_api.reply_message(
 	#	event.reply_token,
-	#	TextSendMessage(text=event.message.text))
+	#	TextSendMessage(text='masukan command ".help" untuk informasi command bot yang tersedia.'))
 
 if __name__ == "__main__":
 	port = int(os.environ.get('PORT', 5000))
