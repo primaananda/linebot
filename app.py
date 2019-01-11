@@ -284,14 +284,22 @@ def handle_text_message(event):
                     ])))
     elif text == '.help':
         line_bot_api.reply_message(
-            event.reply_token, TextSendMessage(text='Berikut merupakan command yang terdapat pada BOT ini: \n 1) profile \n 2) bye \n 3) confirm \n 4) buttons \n 5) carousel \n 6) image carousel \n 7) imagemap \n 8) flex \n 9. quick_reply \n 10) info \n 11) about'))
-    elif text == 'help':
-        line_bot_api.reply_message(
             event.reply_token, TextSendMessage(
                 text='Berikut merupakan command yang terdapat pada BOT ini:',
                 quick_reply=QuickReply(
                     items=[
-                        QuickReplyButton(action=MessageAction(label="profile", text="profile"))
+                        QuickReplyButton(action=MessageAction(label="profile", text="profile")),
+                        QuickReplyButton(action=MessageAction(label="bye", text="bye")),
+                        QuickReplyButton(action=MessageAction(label="confirm", text="confirm")),
+                        QuickReplyButton(action=MessageAction(label="buttons", text="buttons")),
+                        QuickReplyButton(action=MessageAction(label="carousel", text="carousel")),
+                        QuickReplyButton(action=MessageAction(label="image", text="image")),
+                        QuickReplyButton(action=MessageAction(label="image carousel", text="image carousel")),
+                        QuickReplyButton(action=MessageAction(label="imagemap", text="imagemap")),
+                        QuickReplyButton(action=MessageAction(label="flex", text="flex")),
+                        QuickReplyButton(action=MessageAction(label="quick_reply", text="quick_reply")),
+                        QuickReplyButton(action=MessageAction(label="info", text="info")),
+                        QuickReplyButton(action=MessageAction(label="quick_reply", text="about"))
                     ]
                 )
             ))
