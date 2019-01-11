@@ -41,15 +41,23 @@ def handle_message(event):
 	
 	msg = (event.message.text).lower()
 	
+	#show user id
+	profile = line_bot_api.get_profile(user_id)
+	
 	if 'hello' in msg:
 		line_bot_api.reply_message(
 		event.reply_token,
 		TextSendMessage(text="HELOOO"))
-	
-	
+	elif '!ID' in msg:
+		line_bot_api.reply_message(
+		event.reply_token,
+		TextSendMessage(text=profile.user_id))
+		
 	line_bot_api.reply_message(
 		event.reply_token,
 		TextSendMessage(text=event.message.text))
+		
+	
 
 
 if __name__ == "__main__":
