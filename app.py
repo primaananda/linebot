@@ -292,7 +292,6 @@ def handle_text_message(event):
                 quick_reply=QuickReply(
                     items=[
                         QuickReplyButton(action=MessageAction(label="profile", text="profile")),
-                        QuickReplyButton(action=MessageAction(label="profile", text="profile")),
                         QuickReplyButton(action=MessageAction(label="bye", text="bye")),
                         QuickReplyButton(action=MessageAction(label="confirm", text="confirm")),
                         QuickReplyButton(action=MessageAction(label="buttons", text="buttons")),
