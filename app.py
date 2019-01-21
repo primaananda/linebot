@@ -131,6 +131,29 @@ def handle_text_message(event):
         template_message = TemplateSendMessage(
             alt_text='Buttons alt text', template=buttons_template)
         line_bot_api.reply_message(event.reply_token, template_message)
+    elif text == 'cari info grapari' or text == 'cari grapari' or text == 'grapari' :
+        buttons_template = ButtonsTemplate(
+            title='Informasi Grapari', text='Hello, Berikut merupakan data grapari yang terdapat dalam database kami...', actions=[
+                MessageAction(label='Grapari Teuku Umar', text='cari info Grapari Teuku Umar'),
+                MessageAction(label='Grapari Renon', text='cari info Grapari Renon'),
+                MessageAction(label='Info Grapari', text='cari info Grapari'),
+                MessageAction(label='Info Grapari', text='cari info Grapari'),
+                MessageAction(label='Info Grapari', text='cari info Grapari'),
+                MessageAction(label='Info Grapari', text='cari info Grapari'),
+                URIAction(label='About Dev.', uri='http://line.me/ti/p/~primaananda_')
+            ])
+        template_message = TemplateSendMessage(
+            alt_text='Buttons alt text', template=buttons_template)
+        line_bot_api.reply_message(event.reply_token, template_message)
+    # elif text == 'navigation':
+    #     buttons_template = ButtonsTemplate(
+    #         title='Navigation Bot vers.1', text='Hello, ada yang bisa saya bantu...?', actions=[
+    #             MessageAction(label='Info Grapari', text='cari info Grapari'),
+    #             URIAction(label='About Dev.', uri='http://line.me/ti/p/~primaananda_')
+    #         ])
+    #     template_message = TemplateSendMessage(
+    #         alt_text='Buttons alt text', template=buttons_template)
+    #     line_bot_api.reply_message(event.reply_token, template_message)
     elif text == 'carousel':
         carousel_template = CarouselTemplate(columns=[
             CarouselColumn(text='hoge1', title='fuga1', actions=[
@@ -440,7 +463,9 @@ def handle_postback(event):
     elif event.postback.data == 'date_postback':
         line_bot_api.reply_message(
             event.reply_token, TextSendMessage(text=event.postback.params['date']))
-    
+    elif event.postback.data == 'cari info grapari teuku umar' or event.postback.data == 'cari grapari teuku umar' or event.postback.data == 'info grapari teuku umar' or event.postback.data == 'grapari teuku umar' :
+        line_bot_api.reply_message(
+            event.reply_token, TextSendMessage(text=event.postback.params['date']))
 
 
 @handler.add(BeaconEvent)
