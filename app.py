@@ -288,10 +288,10 @@ def handle_text_message(event):
     elif text == '.help':
         line_bot_api.reply_message(
             event.reply_token, TextSendMessage(
-                text='Berikut merupakan command yang terdapat pada BOT ini: \n1. info_grapari\n2. profile\n3. bye\n4. confirm\n5. buttons\n6. carousel\n7 image\n8 image carousel\n9 imagemap\n10 flex\n11 quick_reply\n12 info\n13 about\n14 ip',
+                text='Berikut merupakan command yang terdapat pada BOT ini: \n1. info_grapari\n2. asd. \n3. dsa.',
                 quick_reply=QuickReply(
                     items=[
-                        QuickReplyButton(action=MessageAction(label="info_grapari", text="info_grapari")),
+                        QuickReplyButton(action=MessageAction(label="profile", text="profile")),
                         QuickReplyButton(action=MessageAction(label="profile", text="profile")),
                         QuickReplyButton(action=MessageAction(label="bye", text="bye")),
                         QuickReplyButton(action=MessageAction(label="confirm", text="confirm")),
