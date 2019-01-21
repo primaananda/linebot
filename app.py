@@ -288,7 +288,7 @@ def handle_text_message(event):
     elif text == '.help':
         line_bot_api.reply_message(
             event.reply_token, TextSendMessage(
-                text='Berikut merupakan command yang terdapat pada BOT ini:',
+                text='Berikut merupakan command yang terdapat pada BOT ini: \n1. info_grapari\n2. asd. \n3. dsa.',
                 quick_reply=QuickReply(
                     items=[
                         QuickReplyButton(action=MessageAction(label="profile", text="profile")),
