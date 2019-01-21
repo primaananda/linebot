@@ -132,7 +132,7 @@ def handle_text_message(event):
             alt_text='Buttons alt text', template=buttons_template)
         line_bot_api.reply_message(event.reply_token, template_message)
     elif text == 'cari info grapari' or text == 'cari grapari' or text == 'grapari':
-        carousel_template = CarouselTemplate(columns=[
+        grapari_template = CarouselTemplate(columns=[
             CarouselColumn(text='hoge1', title='fuga1', actions=[
                 URIAction(label='Go to line.me', uri='https://line.me'),
                 PostbackAction(label='ping', data='ping')
@@ -143,7 +143,7 @@ def handle_text_message(event):
             ]),
         ])
         template_message = TemplateSendMessage(
-            alt_text='Carousel alt text', template=carousel_template)
+            alt_text='Carousel alt text', template=grapari_template)
         line_bot_api.reply_message(event.reply_token, template_message)
     # elif text == 'navigation':
     #     buttons_template = ButtonsTemplate(
