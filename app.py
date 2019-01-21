@@ -132,23 +132,18 @@ def handle_text_message(event):
             alt_text='Buttons alt text', template=buttons_template)
         line_bot_api.reply_message(event.reply_token, template_message)
     elif text == 'cari info grapari' or text == 'cari grapari' or text == 'grapari':
-        buttons_template = ButtonsTemplate(
-            title='Navigation Bot vers.1', text='Hello, ada yang bisa saya bantu...?', actions=[
-                MessageAction(label='Grapari Teuku Umar', text='cari info Grapari Teuku Umar'),
-                MessageAction(label='Grapari Renon', text='cari info Grapari Renon'),
-                URIAction(label='About Dev.', uri='http://line.me/ti/p/~primaananda_')
-            ])
+        carousel_template = CarouselTemplate(columns=[
+            CarouselColumn(text='hoge1', title='fuga1', actions=[
+                URIAction(label='Go to line.me', uri='https://line.me'),
+                PostbackAction(label='ping', data='ping')
+            ]),
+            CarouselColumn(text='hoge2', title='fuga2', actions=[
+                PostbackAction(label='ping with text', data='ping', text='ping'),
+                MessageAction(label='Translate Rice', text='米')
+            ]),
+        ])
         template_message = TemplateSendMessage(
-            alt_text='Buttons alt text', template=buttons_template)
-        line_bot_api.reply_message(event.reply_token, template_message)
-        buttons_template = ButtonsTemplate(
-            title='Navigation Bot vers.1', text='Hello, ada yang bisa saya bantu...?', actions=[
-                MessageAction(label='Grapari Teuku Umar', text='cari info Grapari Teuku Umar'),
-                MessageAction(label='Grapari Renon', text='cari info Grapari Renon'),
-                URIAction(label='About Dev.', uri='http://line.me/ti/p/~primaananda_')
-            ])
-        template_message = TemplateSendMessage(
-            alt_text='Buttons alt text', template=buttons_template)
+            alt_text='Carousel alt text', template=carousel_template)
         line_bot_api.reply_message(event.reply_token, template_message)
     # elif text == 'navigation':
     #     buttons_template = ButtonsTemplate(
