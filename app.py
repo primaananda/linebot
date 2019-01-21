@@ -440,9 +440,7 @@ def handle_postback(event):
     elif event.postback.data == 'date_postback':
         line_bot_api.reply_message(
             event.reply_token, TextSendMessage(text=event.postback.params['date']))
-    elif event.postback.data == 'grapari' or event.postback.data == 'cari grapari' or event.postback.data == 'cari info grapari':
-        line_bot_api.reply_message(
-            event.reply_token, TextSendMessage(text='pong'))
+    
 
 
 @handler.add(BeaconEvent)
