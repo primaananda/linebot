@@ -147,13 +147,13 @@ def handle_text_message(event):
             alt_text='Carousel alt text', template=grapari_carousel_template)
         line_bot_api.reply_message(event.reply_token, template_message)
     elif text == 'grapari teuku umar':
-        location_message = LocationSendMessage(
+        location_message = LocationMessage(
             title='Gedung GMP Telkomsel RENON BALI',
             address='Jl. Raya Puputan No.33, Panjer, Denpasar Sel., Kota Denpasar, Bali 80234',
             latitude=-8.672262,
             longitude=115.228615
         )
-        template_message = LocationSendMessage(
+        template_message = LocationMessage(
             alt_text='Carousel alt text', template=location_message)
         line_bot_api.reply_message(event.reply_token, template_message)
     # elif text == 'navigation':
