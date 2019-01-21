@@ -132,18 +132,19 @@ def handle_text_message(event):
             alt_text='Buttons alt text', template=buttons_template)
         line_bot_api.reply_message(event.reply_token, template_message)
     elif text == 'cari info grapari' or text == 'cari grapari' or text == 'grapari':
-        grapari_template = CarouselTemplate(columns=[
-            CarouselColumn(text='hoge1', title='fuga1', actions=[
+        grapari_carousel_template = CarouselTemplate(columns=[
+            CarouselColumn(text='Daftar grapari wilayah Denpasar', title='Denpasar', actions=[
                 URIAction(label='Go to line.me', uri='https://line.me'),
-                PostbackAction(label='ping', data='ping')
+                PostbackAction(label='ping', data='ping'),
+                LocationSendMessage(title='Gedung GMP Telkomsel RENON BALI', address='Jl. Raya Puputan No.33, Panjer, Denpasar Sel., Kota Denpasar, Bali 80234', latitude=-8.672262,longitude=115.228615)
             ]),
-            CarouselColumn(text='hoge2', title='fuga2', actions=[
+            CarouselColumn(text='Daftar grapari wilayah Karangasem', title='Karangasem', actions=[
                 PostbackAction(label='ping with text', data='ping', text='ping'),
                 MessageAction(label='Translate Rice', text='米')
             ]),
         ])
         template_message = TemplateSendMessage(
-            alt_text='Carousel alt text', template=grapari_template)
+            alt_text='Carousel alt text', template=grapari_carousel_template)
         line_bot_api.reply_message(event.reply_token, template_message)
     # elif text == 'navigation':
     #     buttons_template = ButtonsTemplate(
