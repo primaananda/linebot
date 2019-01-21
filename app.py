@@ -131,7 +131,7 @@ def handle_text_message(event):
         template_message = TemplateSendMessage(
             alt_text='Buttons alt text', template=buttons_template)
         line_bot_api.reply_message(event.reply_token, template_message)
-    elif text == 'cari info grapari' or text == 'cari grapari' or text == 'grapari' :
+    elif text == 'cari info grapari':
         buttons_template = ButtonsTemplate(
             title='Informasi Grapari', text='Hello, Berikut merupakan data grapari yang terdapat dalam database kami...', actions=[
                 MessageAction(label='Grapari Teuku Umar', text='cari info Grapari Teuku Umar'),
