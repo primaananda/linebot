@@ -125,7 +125,7 @@ def handle_text_message(event):
     elif text == 'navigation':
         buttons_template = ButtonsTemplate(
             title='Navigation Bot vers.1', text='Hello, ada yang bisa saya bantu...?', actions=[
-                PostbackAction(label='Info Grapari', data='grapari', text='cari info Grapari'),
+                MessageAction(label='Info Grapari', text='cari info Grapari'),
                 URIAction(label='About Dev.', uri='http://line.me/ti/p/~primaananda_')
             ])
         template_message = TemplateSendMessage(
