@@ -18,8 +18,8 @@ PyLINE Bot requires [pip](https://pip.pypa.io/en/stable/installing/) to run.
 Clone the project and Install the Python requirements using pip.
 
 ```sh
-$ git clone https://github.com/abhishtagatya/pyline-bot
-$ cd pyline-bot
+$ git clone https://github.com/primaananda/linebot.git
+$ cd linebot
 $ pip install -r requirements.txt
 ```
 
@@ -29,3 +29,5 @@ Need a tutorial to get started? Read my Medium Post on [Creating Your First LINE
 ## Messaging API
 
 Head on over to [LINE Developers](https://developers.line.me/en/docs/messaging-api/overview/) to create your channel and how the Messaging API provided by LINE works.
+
+thanks to : abhishtagatya
