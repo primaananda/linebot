@@ -83,7 +83,7 @@ def handle_text_message(event):
                 event.reply_token, [
                     TextSendMessage(text='Display name: ' + profile.display_name),
                     TextSendMessage(text='Status message: ' + profile.status_message),
-                    TextSendMessage(text='Picture message: ' + profile.picture_url)
+                    TextSendMessage(text='Picture: ' + profile.picture_url)
                 ]
             )
         else:
@@ -111,13 +111,22 @@ def handle_text_message(event):
         template_message = TemplateSendMessage(
             alt_text='Confirm alt text', template=confirm_template)
         line_bot_api.reply_message(event.reply_token, template_message)
-    elif text == 'buttons':
+    # elif text == 'buttons':
+    #     buttons_template = ButtonsTemplate(
+    #         title='My buttons sample', text='Hello, my buttons', actions=[
+    #             URIAction(label='Go to line.me', uri='https://line.me'),
+    #             PostbackAction(label='ping', data='ping'),
+    #             PostbackAction(label='ping with text', data='ping', text='ping'),
+    #             MessageAction(label='Translate Rice', text='米')
+    #         ])
+    #     template_message = TemplateSendMessage(
+    #         alt_text='Buttons alt text', template=buttons_template)
+    #     line_bot_api.reply_message(event.reply_token, template_message)
+    elif text == 'navigation':
         buttons_template = ButtonsTemplate(
-            title='My buttons sample', text='Hello, my buttons', actions=[
-                URIAction(label='Go to line.me', uri='https://line.me'),
-                PostbackAction(label='ping', data='ping'),
-                PostbackAction(label='ping with text', data='ping', text='ping'),
-                MessageAction(label='Translate Rice', text='米')
+            title='Navigation Bot vers.1', text='Hello, ada yang bisa saya bantu...?', actions=[
+                PostbackAction(label='Info Grapari', data='grapari', text='Grapari'),
+                URIAction(label='About Dev.', uri='http://line.me/ti/p/~primaananda_')
             ])
         template_message = TemplateSendMessage(
             alt_text='Buttons alt text', template=buttons_template)
@@ -316,7 +325,7 @@ def handle_text_message(event):
     elif text == 'ip':
         res = requests.get('https://ipinfo.io/')
         data = res.json()
-        your_ip = data['ip']
+        # your_ip = data['ip']
         line_bot_api.reply_message(
             event.reply_token, TextSendMessage(text=('alamat IP : ' + data['ip'] + '\nhostname : ' + data['hostname'] + '\nKota : ' + data['city'] + '\nNegara : ' + data['country'] + '\nLokasi : ' + data['loc'] + '\nOrganisasi : ' + data['org'])))
     else:
