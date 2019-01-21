@@ -125,7 +125,7 @@ def handle_text_message(event):
     elif text == 'navigation':
         buttons_template = ButtonsTemplate(
             title='Navigation Bot vers.1', text='Hello, ada yang bisa saya bantu...?', actions=[
-                PostbackAction(label='Info Grapari', data='grapari', text='Grapari'),
+                PostbackAction(label='Info Grapari', data='grapari', text='cari info Grapari'),
                 URIAction(label='About Dev.', uri='http://line.me/ti/p/~primaananda_')
             ])
         template_message = TemplateSendMessage(
@@ -440,6 +440,9 @@ def handle_postback(event):
     elif event.postback.data == 'date_postback':
         line_bot_api.reply_message(
             event.reply_token, TextSendMessage(text=event.postback.params['date']))
+    elif event.postback.data == 'grapari' or event.postback.data == 'cari grapari' or event.postback.data == 'cari info grapari':
+        line_bot_api.reply_message(
+            event.reply_token, TextSendMessage(text='pong'))
 
 
 @handler.add(BeaconEvent)
