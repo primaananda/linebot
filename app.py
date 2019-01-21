@@ -83,6 +83,7 @@ def handle_text_message(event):
                 event.reply_token, [
                     TextSendMessage(text='Display name: ' + profile.display_name),
                     TextSendMessage(text='Status message: ' + profile.status_message)
+                    TextSendMessage(text='Picture message: ' + profile.picture_url)
                 ]
             )
         else:
