@@ -133,6 +133,15 @@ def handle_text_message(event):
         line_bot_api.reply_message(event.reply_token, template_message)
     elif text == 'cari info grapari':
         buttons_template = ButtonsTemplate(
+            title='Navigation Bot vers.1', text='Hello, ada yang bisa saya bantu...?', actions=[
+                MessageAction(label='Info Grapari', text='cari info Grapari'),
+                URIAction(label='About Dev.', uri='http://line.me/ti/p/~primaananda_')
+            ])
+        template_message = TemplateSendMessage(
+            alt_text='Buttons alt text', template=buttons_template)
+        line_bot_api.reply_message(event.reply_token, template_message)
+    elif text == 'ccari info grapari' or text == 'cari grapari' or text == 'grapari' :
+        buttons_template = ButtonsTemplate(
             title='Informasi Grapari', text='Hello, Berikut merupakan data grapari yang terdapat dalam database kami...', actions=[
                 MessageAction(label='Grapari Teuku Umar', text='cari info Grapari Teuku Umar'),
                 MessageAction(label='Grapari Renon', text='cari info Grapari Renon'),
