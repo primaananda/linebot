@@ -495,7 +495,7 @@ def handle_postback(event):
                 longitude=115.214185
                 )
             ])
-    elif event.postback.data == 'grapari renon':
+    elif event.postback.data == 'grapari renon' or text== 'grapari renon':
         line_bot_api.reply_message(
             event.reply_token,[
                 LocationSendMessage(
@@ -505,6 +505,7 @@ def handle_postback(event):
                 longitude=115.228615
                 )
             ])
+            break;
 
 
 @handler.add(BeaconEvent)
