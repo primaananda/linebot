@@ -157,7 +157,7 @@ def handle_text_message(event):
                 )
             ]
         )
-    elif text == 'grapari teuku umar':
+    elif text == 'grapari teuku umar' or 'teuku umar':
         line_bot_api.reply_message(
             event.reply_token,[
                 LocationSendMessage(
