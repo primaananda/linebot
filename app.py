@@ -160,17 +160,17 @@ def handle_text_message(event):
                 )
             ]
         )
-    # elif text == 'grapari teuku umar':
-    #     line_bot_api.reply_message(
-    #         event.reply_token,[
-    #             LocationSendMessage(
-    #             title='My GraPARI Denpasar Teuku Umar',
-    #             address='Jl. Teuku Umar No.6, Dauh Puri Klod, Denpasar Bar., Kota Denpasar, Bali 80114',
-    #             latitude=-8.669041,
-    #             longitude=115.214185
-    #             )
-    #         ]
-    #     )
+    elif text == 'grapari teuku umar':
+        line_bot_api.reply_message(
+            event.reply_token,[
+                LocationSendMessage(
+                title='My GraPARI Denpasar Teuku Umar',
+                address='Jl. Teuku Umar No.6, Dauh Puri Klod, Denpasar Bar., Kota Denpasar, Bali 80114',
+                latitude=-8.669041,
+                longitude=115.214185
+                )
+            ]
+        )
     elif text == 'grapari mbg' or 'grapari mall bali galeria' or 'grapari badung':
         line_bot_api.reply_message(
             event.reply_token,[
@@ -513,9 +513,6 @@ def handle_postback(event):
         line_bot_api.reply_message(
             event.reply_token, TextSendMessage(text=event.postback.params['datetime']))
     elif event.postback.data == 'date_postback':
-        line_bot_api.reply_message(
-            event.reply_token, TextSendMessage(text=event.postback.params['date']))
-    elif event.postback.data == 'cari info grapari teuku umar' or event.postback.data == 'cari grapari teuku umar' or event.postback.data == 'info grapari teuku umar' or event.postback.data == 'grapari teuku umar' :
         line_bot_api.reply_message(
             event.reply_token, TextSendMessage(text=event.postback.params['date']))
 
