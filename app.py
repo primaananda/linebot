@@ -162,7 +162,7 @@ def handle_text_message(event):
             event.reply_token,[
                 LocationSendMessage(
                 title='My GraPARI Denpasar',
-                address='GraPARI Telkomsel Plasa Telkom, Jl. Teuku Umar No.6, Dauh Puri Klod, Denpasar Bar., Kota Denpasar, Bali 80114',
+                address='teuku',
                 latitude=-8.669041,
                 longitude=115.214185
                 )
