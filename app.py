@@ -134,9 +134,9 @@ def handle_text_message(event):
     elif text == 'cari info grapari' or text == 'cari grapari' or text == 'grapari':
         grapari_carousel_template = CarouselTemplate(columns=[
             CarouselColumn(text='Daftar grapari wilayah Denpasar', title='Denpasar', actions=[
-                URIAction(label='Go to line.me', uri='https://line.me'),
-                PostbackAction(label='ping', data='ping'),
-                LocationSendMessage(title='Gedung GMP Telkomsel RENON BALI', address='Jl. Raya Puputan No.33, Panjer, Denpasar Sel., Kota Denpasar, Bali 80234', latitude=-8.672262,longitude=115.228615)
+                MessageAction(label='Grapari Teuku Umar', text='grapari teuku umar'),
+                MessageAction(label='Grapari Renon', text='grapari renon')
+                # LocationSendMessage(title='Gedung GMP Telkomsel RENON BALI', address='Jl. Raya Puputan No.33, Panjer, Denpasar Sel., Kota Denpasar, Bali 80234', latitude=-8.672262,longitude=115.228615)
             ]),
             CarouselColumn(text='Daftar grapari wilayah Karangasem', title='Karangasem', actions=[
                 PostbackAction(label='ping with text', data='ping', text='ping'),
@@ -146,7 +146,7 @@ def handle_text_message(event):
         template_message = TemplateSendMessage(
             alt_text='Carousel alt text', template=grapari_carousel_template)
         line_bot_api.reply_message(event.reply_token, template_message)
-    elif text == 'grapari teuku umar':
+    elif text == 'grapari renon':
         line_bot_api.reply_message(
             event.reply_token,[
                 LocationSendMessage(
