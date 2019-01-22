@@ -138,16 +138,16 @@ def handle_text_message(event):
         template_message = TemplateSendMessage(
             alt_text='Carousel alt text', template=carousel_template)
         line_bot_api.reply_message(event.reply_token, template_message)
-    elif text == 'grapari teuku umar':
-        line_bot_api.reply_message(
-            event.reply_token,[
-                LocationSendMessage(
-                title='My GraPARI Denpasar Renon',
-                address='Jl. Raya Puputan No.33, Panjer, Denpasar Sel., Kota Denpasar, Bali 80234',
-                latitude=-8.672262,
-                longitude=115.228615
-                )
-            ])
+    # elif text == 'grapari teuku umar':
+    #     line_bot_api.reply_message(
+    #         event.reply_token,[
+    #             LocationSendMessage(
+    #             title='My GraPARI Denpasar Renon',
+    #             address='Jl. Raya Puputan No.33, Panjer, Denpasar Sel., Kota Denpasar, Bali 80234',
+    #             latitude=-8.672262,
+    #             longitude=115.228615
+    #             )
+    #         ])
     # elif text=='grapari teuku umar':
     #     line_bot_api.reply_message(
     #         event.reply_token,[
