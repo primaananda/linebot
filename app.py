@@ -157,17 +157,6 @@ def handle_text_message(event):
                 )
             ]
         )
-        elif text == 'grapari teuku umar':
-        line_bot_api.reply_message(
-            event.reply_token,[
-                LocationSendMessage(
-                title='My GraPARI Denpasar',
-                address='GraPARI Telkomsel Plasa Telkom, Jl. Teuku Umar No.6, Dauh Puri Klod, Denpasar Bar., Kota Denpasar, Bali 80114',
-                latitude=-8.669048,
-                longitude= 115.214189
-                )
-            ]
-        )
     # elif text == 'navigation':
     #     buttons_template = ButtonsTemplate(
     #         title='Navigation Bot vers.1', text='Hello, ada yang bisa saya bantu...?', actions=[
