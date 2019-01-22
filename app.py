@@ -123,21 +123,41 @@ def handle_text_message(event):
     elif text == 'cari info grapari' or text == 'cari grapari' or text == 'grapari':
         carousel_template = CarouselTemplate(columns=[
             CarouselColumn(text='Daftar grapari wilayah Denpasar', title='Denpasar', actions=[
-                PostbackAction(label='grapari teuku umar', data='grapari teuku umar', text='grapari teuku umar'),
-                PostbackAction(label='grapari renon', data='grapari renon', text='grapari renon')
+                MessageAction(label='grapari teuku umar', text='grapari teuku umar'),
+                MessageAction(label='grapari renon', text='grapari renon')
             ]),
             CarouselColumn(text='hoge2', title='fuga2', actions=[
-                PostbackAction(label='ping with text', data='ping', text='ping'),
+                MessageAction(label='ping with text', data='ping', text='ping'),
                 MessageAction(label='Translate Rice', text='米')
             ]),
             CarouselColumn(text='hoge1', title='fuga1', actions=[
-                URIAction(label='Go to line.me', uri='https://line.me'),
+                MessageAction(label='Go to line.me', uri='https://line.me'),
                 PostbackAction(label='ping', data='ping')
             ]),
         ])
         template_message = TemplateSendMessage(
             alt_text='Carousel alt text', template=carousel_template)
         line_bot_api.reply_message(event.reply_token, template_message)
+    elif text == 'cari info grapari':
+        line_bot_api.reply_message(
+            event.reply_token,[
+                LocationSendMessage(
+                title='My GraPARI Denpasar Renon',
+                address='Jl. Raya Puputan No.33, Panjer, Denpasar Sel., Kota Denpasar, Bali 80234',
+                latitude=-8.672262,
+                longitude=115.228615
+                )
+            ])
+    elif text=='grapari teuku umar':
+        line_bot_api.reply_message(
+            event.reply_token,[
+                LocationSendMessage(
+                title='My GraPARI Denpasar Teuku Umar',
+                address='Jl. Teuku Umar No.6, Dauh Puri Klod, Denpasar Bar., Kota Denpasar, Bali 80114',
+                latitude=-8.669041,
+                longitude=115.214185
+                )
+            ])
         # grapari_carousel_template = CarouselTemplate(columns=[
         #     CarouselColumn(text='Daftar grapari wilayah Denpasar', title='Denpasar', actions=[
         #         PostbackAction(label='grapari teuku umar', data='grapari teuku umar', text='grapari teuku umar'),
@@ -485,27 +505,26 @@ def handle_postback(event):
                 longitude=115.184888
                 )
             ])
-    elif event.postback.data == 'grapari teuku umar':
-        line_bot_api.reply_message(
-            event.reply_token,[
-                LocationSendMessage(
-                title='My GraPARI Denpasar Teuku Umar',
-                address='Jl. Teuku Umar No.6, Dauh Puri Klod, Denpasar Bar., Kota Denpasar, Bali 80114',
-                latitude=-8.669041,
-                longitude=115.214185
-                )
-            ])
-    elif event.postback.data == 'grapari renon':
-        line_bot_api.reply_message(
-            event.reply_token,[
-                LocationSendMessage(
-                title='My GraPARI Denpasar Renon',
-                address='Jl. Raya Puputan No.33, Panjer, Denpasar Sel., Kota Denpasar, Bali 80234',
-                latitude=-8.672262,
-                longitude=115.228615
-                )
-            ])
-            break;
+    # elif event.postback.data == 'grapari teuku umar':
+    #     line_bot_api.reply_message(
+    #         event.reply_token,[
+    #             LocationSendMessage(
+    #             title='My GraPARI Denpasar Teuku Umar',
+    #             address='Jl. Teuku Umar No.6, Dauh Puri Klod, Denpasar Bar., Kota Denpasar, Bali 80114',
+    #             latitude=-8.669041,
+    #             longitude=115.214185
+    #             )
+    #         ])
+    # elif event.postback.data == 'grapari renon':
+    #     line_bot_api.reply_message(
+    #         event.reply_token,[
+    #             LocationSendMessage(
+    #             title='My GraPARI Denpasar Renon',
+    #             address='Jl. Raya Puputan No.33, Panjer, Denpasar Sel., Kota Denpasar, Bali 80234',
+    #             latitude=-8.672262,
+    #             longitude=115.228615
+    #             )
+    #         ])
 
 
 @handler.add(BeaconEvent)
