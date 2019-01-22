@@ -126,9 +126,9 @@ def handle_text_message(event):
                 MessageAction(label='grapari teuku umar', text='grapari teuku umar'),
                 MessageAction(label='grapari renon', text='grapari renon')
             ]),
-            CarouselColumn(text='Daftar grapari wilayah Bangli', title='Bangli', actions=[
-                MessageAction(label='Grapari Not Found', text='asd'),
-            ]),
+            CarouselColumn(text='Daftar grapari wilayah Bangli', title='Bangli', actions=
+                MessageAction(label='Grapari Not Found', text='asd')
+            ),
             CarouselColumn(text='Daftar grapari wilayah Buleleng', title='Buleleng', actions=[
                 MessageAction(label='ping with text', text='ping'),
                 MessageAction(label='Translate Rice', text='米')
