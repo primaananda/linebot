@@ -139,8 +139,10 @@ def handle_text_message(event):
                 # LocationSendMessage(title='Gedung GMP Telkomsel RENON BALI', address='Jl. Raya Puputan No.33, Panjer, Denpasar Sel., Kota Denpasar, Bali 80234', latitude=-8.672262,longitude=115.228615)
             ]),
             CarouselColumn(text='Daftar grapari wilayah Karangasem', title='Karangasem', actions=[
-                PostbackAction(label='ping with text', data='ping', text='ping'),
-                MessageAction(label='Translate Rice', text='米')
+                MessageAction(label='Grapari Karangasem', text='米')
+            ]),
+            CarouselColumn(text='Daftar grapari wilayah Badung', title='Badung', actions=[
+                MessageAction(label='Grapari Mall Bali Galeria', text='grapari mbg')
             ]),
         ])
         template_message = TemplateSendMessage(
@@ -174,8 +176,19 @@ def handle_text_message(event):
                 LocationSendMessage(
                 title='Grapari Telkomsel MBG',
                 address='JL. by Pass I Gusti Ngurah Rai , 80361 Denpasar , Bali, Kuta, Badung Regency, Bali 80361',
-                latitude=-8.669041,
-                longitude=115.214185
+                latitude=-8.723316,
+                longitude=115.184888
+                )
+            ]
+        )
+    elif text == 'grapari karangasem':
+        line_bot_api.reply_message(
+            event.reply_token,[
+                LocationSendMessage(
+                title='graPARI Telkomsel Karangasem',
+                address='Jl. PB. Sudirman 98 C, Amlapura, Kecamatan Karangasem, Subagan, Kec. Karangasem, Kabupaten Karangasem, Bali 80811',
+                latitude=-8.451645,
+                longitude=115.603835
                 )
             ]
         )
