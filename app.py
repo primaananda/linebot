@@ -150,7 +150,7 @@ def handle_text_message(event):
         line_bot_api.reply_message(
             event.reply_token,[
                 LocationSendMessage(
-                title='Gedung GMP Telkomsel RENON BALI',
+                title='My GraPARI Denpasar Renon',
                 address='Jl. Raya Puputan No.33, Panjer, Denpasar Sel., Kota Denpasar, Bali 80234',
                 latitude=-8.672262,
                 longitude=115.228615
@@ -161,8 +161,19 @@ def handle_text_message(event):
         line_bot_api.reply_message(
             event.reply_token,[
                 LocationSendMessage(
-                title='My GraPARI Denpasar',
+                title='My GraPARI Denpasar Teuku Umar',
                 address='Jl. Teuku Umar No.6, Dauh Puri Klod, Denpasar Bar., Kota Denpasar, Bali 80114',
+                latitude=-8.669041,
+                longitude=115.214185
+                )
+            ]
+        )
+    elif text == 'grapari mbg' or 'grapari mall bali galeria' or 'grapari badung':
+        line_bot_api.reply_message(
+            event.reply_token,[
+                LocationSendMessage(
+                title='Grapari Telkomsel MBG',
+                address='JL. by Pass I Gusti Ngurah Rai , 80361 Denpasar , Bali, Kuta, Badung Regency, Bali 80361',
                 latitude=-8.669041,
                 longitude=115.214185
                 )
