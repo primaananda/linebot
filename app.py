@@ -127,12 +127,12 @@ def handle_text_message(event):
                 MessageAction(label='grapari renon', text='grapari renon')
             ]),
             CarouselColumn(text='Daftar grapari wilayah Bangli', title='Bangli', actions=[
-                MessageAction(label='No', text=' '),
-                MessageAction(label='Grapari Found', text=' ')
+                MessageAction(label=' ', text=' '),
+                MessageAction(label=' ', text=' ')
             ]),
             CarouselColumn(text='Daftar grapari wilayah Buleleng', title='Buleleng', actions=[
                 MessageAction(label='ping with text', text='ping'),
-                MessageAction(label='Translate Rice', text='米')
+                MessageAction(label=' ', text=' ')
             ]),
             CarouselColumn(text='Daftar grapari wilayah Gianyar', title='Gianyar', actions=[
                 MessageAction(label='ping with text', text='ping'),
