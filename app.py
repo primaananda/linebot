@@ -148,16 +148,16 @@ def handle_text_message(event):
                 longitude=115.228615
                 )
             ])
-    elif text=='grapari teuku umar':
-        line_bot_api.reply_message(
-            event.reply_token,[
-                LocationSendMessage(
-                title='My GraPARI Denpasar Teuku Umar',
-                address='Jl. Teuku Umar No.6, Dauh Puri Klod, Denpasar Bar., Kota Denpasar, Bali 80114',
-                latitude=-8.669041,
-                longitude=115.214185
-                )
-            ])
+    # elif text=='grapari teuku umar':
+    #     line_bot_api.reply_message(
+    #         event.reply_token,[
+    #             LocationSendMessage(
+    #             title='My GraPARI Denpasar Teuku Umar',
+    #             address='Jl. Teuku Umar No.6, Dauh Puri Klod, Denpasar Bar., Kota Denpasar, Bali 80114',
+    #             latitude=-8.669041,
+    #             longitude=115.214185
+    #             )
+    #         ])
         # grapari_carousel_template = CarouselTemplate(columns=[
         #     CarouselColumn(text='Daftar grapari wilayah Denpasar', title='Denpasar', actions=[
         #         PostbackAction(label='grapari teuku umar', data='grapari teuku umar', text='grapari teuku umar'),
