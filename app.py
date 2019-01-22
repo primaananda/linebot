@@ -127,7 +127,7 @@ def handle_text_message(event):
                 MessageAction(label='grapari renon', text='grapari renon')
             ]),
             CarouselColumn(text='Daftar grapari wilayah Bangli', title='Bangli', actions=[
-                TextSendMessage(text='Display name: '),
+                MessageAction(label='Translate Rice', text='米'),
                 MessageAction(label='Translate Rice', text='米')
             ]),
             CarouselColumn(text='Daftar grapari wilayah Buleleng', title='Buleleng', actions=[
