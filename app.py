@@ -178,7 +178,7 @@ def handle_text_message(event):
                 longitude=115.214185
                 )
             ])
-    elif text=='grapari Buleleng':
+    elif text=='grapari buleleng':
         line_bot_api.reply_message(
             event.reply_token,[
                 LocationSendMessage(
