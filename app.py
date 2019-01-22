@@ -126,31 +126,31 @@ def handle_text_message(event):
                 MessageAction(label='grapari teuku umar', text='grapari teuku umar'),
                 MessageAction(label='grapari renon', text='grapari renon')
             ]),
-            CarouselColumn(text='hoge2', title='fuga2', actions=[
+            CarouselColumn(text='Daftar grapari wilayah Bangli', title='Bangli', actions=[
                 MessageAction(label='ping with text', text='ping'),
                 MessageAction(label='Translate Rice', text='米')
             ]),
-            CarouselColumn(text='hoge2', title='fuga2', actions=[
+            CarouselColumn(text='Daftar grapari wilayah Buleleng', title='Buleleng', actions=[
                 MessageAction(label='ping with text', text='ping'),
                 MessageAction(label='Translate Rice', text='米')
             ]),
-            CarouselColumn(text='hoge2', title='fuga2', actions=[
+            CarouselColumn(text='Daftar grapari wilayah Gianyar', title='Gianyar', actions=[
                 MessageAction(label='ping with text', text='ping'),
                 MessageAction(label='Translate Rice', text='米')
             ]),
-            CarouselColumn(text='hoge2', title='fuga2', actions=[
+            CarouselColumn(text='Daftar grapari wilayah Jembrana', title='Jembrana', actions=[
                 MessageAction(label='ping with text', text='ping'),
                 MessageAction(label='Translate Rice', text='米')
             ]),
-            CarouselColumn(text='hoge2', title='fuga2', actions=[
+            CarouselColumn(text='Daftar grapari wilayah Karangasem', title='Karangasem', actions=[
                 MessageAction(label='ping with text', text='ping'),
                 MessageAction(label='Translate Rice', text='米')
             ]),
-            CarouselColumn(text='hoge2', title='fuga2', actions=[
+            CarouselColumn(text='Daftar grapari wilayah Klungkung', title='Klungkung', actions=[
                 MessageAction(label='ping with text', text='ping'),
                 MessageAction(label='Translate Rice', text='米')
             ]),
-            CarouselColumn(text='hoge2', title='fuga2', actions=[
+            CarouselColumn(text='Daftar grapari wilayah Tabanan', title='Tabanan', actions=[
                 MessageAction(label='ping with text', text='ping'),
                 MessageAction(label='Translate Rice', text='米')
             ]),
