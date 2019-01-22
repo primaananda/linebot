@@ -126,10 +126,10 @@ def handle_text_message(event):
                 MessageAction(label='grapari teuku umar', text='grapari teuku umar'),
                 MessageAction(label='grapari renon', text='grapari renon')
             ]),
-            # CarouselColumn(text='hoge2', title='fuga2', actions=[
-            #     MessageAction(label='ping with text', data='ping', text='ping'),
-            #     MessageAction(label='Translate Rice', text='米')
-            # ]),
+            CarouselColumn(text='hoge2', title='fuga2', actions=[
+                MessageAction(label='ping with text', text='ping'),
+                MessageAction(label='Translate Rice', text='米')
+            ]),
             # CarouselColumn(text='hoge1', title='fuga1', actions=[
             #     MessageAction(label='Go to line.me', uri='https://line.me'),
             #     PostbackAction(label='ping', data='ping')
