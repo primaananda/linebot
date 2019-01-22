@@ -140,6 +140,10 @@ def handle_text_message(event):
             CarouselColumn(text='Daftar grapari wilayah Karangasem', title='Karangasem', actions=[
                 MessageAction(label='Grapari Karangasem', text='grapari karangasem')
             ]),
+            
+            CarouselColumn(text='Daftar grapari wilayah Badung', title='Badung', actions=[
+                MessageAction(label='Grapari Mall Bali Galeria', text='grapari mbg')
+            ])
         ])
         template_message = TemplateSendMessage(
             alt_text='Carousel alt text', template=grapari_carousel_template)
