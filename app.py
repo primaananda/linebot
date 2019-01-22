@@ -138,7 +138,12 @@ def handle_text_message(event):
                 MessageAction(label='Grapari Renon', text='grapari renon')
             ]),
             CarouselColumn(text='Daftar grapari wilayah Karangasem', title='Karangasem', actions=[
-                MessageAction(label='Grapari Karangasem', text='grapari karangasem')
+                MessageAction(label='Grapari Karangasem', text='grapari karangasem'),
+                PostbackAction(label='ping with text', data='ping', text='ping')
+            ]),
+            CarouselColumn(text='Daftar grapari wilayah Badung', title='Badung', actions=[
+                MessageAction(label='Grapari Mall Bali Galeria', text='grapari mbg'),
+                PostbackAction(label='ping with text', data='ping', text='ping')
             ]),
         ])
         template_message = TemplateSendMessage(
