@@ -136,10 +136,9 @@ def handle_text_message(event):
             CarouselColumn(text='Daftar grapari wilayah Denpasar', title='Denpasar', actions=[
                 MessageAction(label='Grapari Teuku Umar', text='grapari teuku umar'),
                 MessageAction(label='Grapari Renon', text='grapari renon')
-                # LocationSendMessage(title='Gedung GMP Telkomsel RENON BALI', address='Jl. Raya Puputan No.33, Panjer, Denpasar Sel., Kota Denpasar, Bali 80234', latitude=-8.672262,longitude=115.228615)
             ]),
             CarouselColumn(text='Daftar grapari wilayah Karangasem', title='Karangasem', actions=[
-                MessageAction(label='Grapari Karangasem', text='米')
+                MessageAction(label='Grapari Karangasem', text='grapari karangasem')
             ]),
             CarouselColumn(text='Daftar grapari wilayah Badung', title='Badung', actions=[
                 MessageAction(label='Grapari Mall Bali Galeria', text='grapari mbg')
