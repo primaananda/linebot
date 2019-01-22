@@ -121,20 +121,37 @@ def handle_text_message(event):
             alt_text='Buttons alt text', template=buttons_template)
         line_bot_api.reply_message(event.reply_token, template_message)
     elif text == 'cari info grapari' or text == 'cari grapari' or text == 'grapari':
-        grapari_carousel_template = CarouselTemplate(columns=[
+        carousel_template = CarouselTemplate(columns=[
             CarouselColumn(text='Daftar grapari wilayah Denpasar', title='Denpasar', actions=[
                 PostbackAction(label='grapari teuku umar', data='grapari teuku umar', text='grapari teuku umar'),
                 PostbackAction(label='grapari renon', data='grapari renon', text='grapari renon')
             ]),
-            CarouselColumn(text='Daftar grapari wilayah Karangasem', title='Karangasem', actions=[
-                PostbackAction(label='grapari karangasem', data='grapari karangasem', text='grapari karangasem')]),
-            CarouselColumn(text='Daftar grapari wilayah Badung', title='Badung', actions=[
-                PostbackAction(label='grapari mbg', data='grapari mbg', text='grapari mbg')
+            CarouselColumn(text='hoge2', title='fuga2', actions=[
+                PostbackAction(label='ping with text', data='ping', text='ping'),
+                MessageAction(label='Translate Rice', text='米')
+            ]),
+            CarouselColumn(text='hoge1', title='fuga1', actions=[
+                URIAction(label='Go to line.me', uri='https://line.me'),
+                PostbackAction(label='ping', data='ping')
             ]),
         ])
         template_message = TemplateSendMessage(
-            alt_text='Carousel alt text', template=grapari_carousel_template)
+            alt_text='Carousel alt text', template=carousel_template)
         line_bot_api.reply_message(event.reply_token, template_message)
+        # grapari_carousel_template = CarouselTemplate(columns=[
+        #     CarouselColumn(text='Daftar grapari wilayah Denpasar', title='Denpasar', actions=[
+        #         PostbackAction(label='grapari teuku umar', data='grapari teuku umar', text='grapari teuku umar'),
+        #         PostbackAction(label='grapari renon', data='grapari renon', text='grapari renon')
+        #     ]),
+        #     CarouselColumn(text='Daftar grapari wilayah Karangasem', title='Karangasem', actions=[
+        #         PostbackAction(label='grapari karangasem', data='grapari karangasem', text='grapari karangasem')]),
+        #     CarouselColumn(text='Daftar grapari wilayah Badung', title='Badung', actions=[
+        #         PostbackAction(label='grapari mbg', data='grapari mbg', text='grapari mbg')
+        #     ])
+        # ])
+        # template_message = TemplateSendMessage(
+        #     alt_text='Carousel alt text', template=grapari_carousel_template)
+        # line_bot_api.reply_message(event.reply_token, template_message)
     elif text == 'carousel':
         carousel_template = CarouselTemplate(columns=[
             CarouselColumn(text='hoge1', title='fuga1', actions=[
