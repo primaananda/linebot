@@ -131,7 +131,7 @@ def handle_text_message(event):
                 MessageAction(label=' ', text=' ')
             ]),
             CarouselColumn(text='Daftar grapari wilayah Buleleng', title='Buleleng', actions=[
-                MessageAction(label='ping with text', text='ping'),
+                MessageAction(label='grapari Buleleng', text='grapari buleleng'),
                 MessageAction(label=' ', text=' ')
             ]),
             CarouselColumn(text='Daftar grapari wilayah Gianyar', title='Gianyar', actions=[
@@ -176,6 +176,16 @@ def handle_text_message(event):
                 address='Jl. Teuku Umar No.6, Dauh Puri Klod, Denpasar Bar., Kota Denpasar, Bali 80114',
                 latitude=-8.669041,
                 longitude=115.214185
+                )
+            ])
+    elif text=='grapari Buleleng':
+        line_bot_api.reply_message(
+            event.reply_token,[
+                LocationSendMessage(
+                title='My GraPARI Buleleng',
+                address='Jl. A. Yani No.72, Kaliuntu, Kec. Buleleng, Kabupaten Buleleng, Bali 81114',
+                latitude=-8.111648,
+                longitude=115.085734
                 )
             ])
         # grapari_carousel_template = CarouselTemplate(columns=[
