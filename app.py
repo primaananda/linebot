@@ -130,10 +130,30 @@ def handle_text_message(event):
                 MessageAction(label='ping with text', text='ping'),
                 MessageAction(label='Translate Rice', text='米')
             ]),
-            # CarouselColumn(text='hoge1', title='fuga1', actions=[
-            #     MessageAction(label='Go to line.me', uri='https://line.me'),
-            #     PostbackAction(label='ping', data='ping')
-            # ]),
+            CarouselColumn(text='hoge2', title='fuga2', actions=[
+                MessageAction(label='ping with text', text='ping'),
+                MessageAction(label='Translate Rice', text='米')
+            ]),
+            CarouselColumn(text='hoge2', title='fuga2', actions=[
+                MessageAction(label='ping with text', text='ping'),
+                MessageAction(label='Translate Rice', text='米')
+            ]),
+            CarouselColumn(text='hoge2', title='fuga2', actions=[
+                MessageAction(label='ping with text', text='ping'),
+                MessageAction(label='Translate Rice', text='米')
+            ]),
+            CarouselColumn(text='hoge2', title='fuga2', actions=[
+                MessageAction(label='ping with text', text='ping'),
+                MessageAction(label='Translate Rice', text='米')
+            ]),
+            CarouselColumn(text='hoge2', title='fuga2', actions=[
+                MessageAction(label='ping with text', text='ping'),
+                MessageAction(label='Translate Rice', text='米')
+            ]),
+            CarouselColumn(text='hoge2', title='fuga2', actions=[
+                MessageAction(label='ping with text', text='ping'),
+                MessageAction(label='Translate Rice', text='米')
+            ]),
         ])
         template_message = TemplateSendMessage(
             alt_text='Carousel alt text', template=carousel_template)
