@@ -123,7 +123,7 @@ def handle_text_message(event):
     elif text == 'cari info grapari' or text == 'cari grapari' or text == 'grapari':
         carousel_template = CarouselTemplate(columns=[
             CarouselColumn(text='Daftar grapari wilayah Denpasar', title='Denpasar', actions=[
-                MessageAction(label='grapari teuku umar', text='grapari teuku umar'),
+                MessageAction(label='Grapari Geuku Umar', text='grapari teuku umar'),
                 MessageAction(label='grapari renon', text='grapari renon')
             ]),
             CarouselColumn(text='Daftar grapari wilayah Bangli', title='Bangli', actions=[
@@ -136,23 +136,23 @@ def handle_text_message(event):
             ]),
             CarouselColumn(text='Daftar grapari wilayah Gianyar', title='Gianyar', actions=[
                 MessageAction(label='grapari Gianyar', text='grapari gianyar'),
-                MessageAction(label='Translate Rice', text='米')
+                MessageAction(label=' ', text=' ')
             ]),
             CarouselColumn(text='Daftar grapari wilayah Jembrana', title='Jembrana', actions=[
-                MessageAction(label='ping with text', text='ping'),
-                MessageAction(label='Translate Rice', text='米')
+                MessageAction(label='graPARI Telkomsel Negara', text='grapari negara'),
+                MessageAction(label=' ', text=' ')
             ]),
             CarouselColumn(text='Daftar grapari wilayah Karangasem', title='Karangasem', actions=[
-                MessageAction(label='ping with text', text='ping'),
-                MessageAction(label='Translate Rice', text='米')
+                MessageAction(label='graPARI Karangasem', text='grapari karangasem'),
+                MessageAction(label=' ', text=' ')
             ]),
             CarouselColumn(text='Daftar grapari wilayah Klungkung', title='Klungkung', actions=[
-                MessageAction(label='ping with text', text='ping'),
-                MessageAction(label='Translate Rice', text='米')
+                MessageAction(label='Status Grapari', text='grapari klungkung'),
+                MessageAction(label=' ', text=' ')
             ]),
             CarouselColumn(text='Daftar grapari wilayah Tabanan', title='Tabanan', actions=[
-                MessageAction(label='ping with text', text='ping'),
-                MessageAction(label='Translate Rice', text='米')
+                MessageAction(label='Grapari Tabanan', text='grapari tabanan'),
+                MessageAction(label=' ', text=' ')
             ]),
         ])
         template_message = TemplateSendMessage(
@@ -216,6 +216,26 @@ def handle_text_message(event):
                 address='Jl. PB. Sudirman 98 C, Amlapura, Kecamatan Karangasem, Subagan, Kec. Karangasem, Kabupaten Karangasem, Bali 80811',
                 latitude=-8.451645,
                 longitude=115.603835
+                )
+            ])
+    elif text=='grapari negara':
+        line_bot_api.reply_message(
+            event.reply_token,[
+                LocationSendMessage(
+                title='GraPARI Telkomsel Negara',
+                address='Jl. Ngurah Rai, Pendem, Kec. Jembrana, Kabupaten Jembrana, Bali 82218',
+                latitude=-8.360644,
+                longitude=114.629995
+                )
+            ])
+    elif text=='grapari tabanan':
+        line_bot_api.reply_message(
+            event.reply_token,[
+                LocationSendMessage(
+                title='GraPARI Telkomsel Tabanan',
+                address='Jl. Dr. Ir. Soekarno, Banjar Anyar, Kediri, Kabupaten Tabanan, Bali 82121',
+                latitude=-8.552806,
+                longitude=115.135258
                 )
             ])
         # grapari_carousel_template = CarouselTemplate(columns=[
