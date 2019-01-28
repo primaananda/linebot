@@ -147,7 +147,7 @@ def handle_text_message(event):
                 MessageAction(label=' ', text=' ')
             ]),
             CarouselColumn(text='Daftar grapari wilayah Klungkung', title='Klungkung', actions=[
-                MessageAction(label='Status Grapari', text='tidak terdapat Grapari di Klungkung'),
+                PostbackAction(label='Status Grapari', data='tidak terdapat Grapari di Klungkung', text=' '),
                 MessageAction(label=' ', text=' ')
             ]),
             CarouselColumn(text='Daftar grapari wilayah Tabanan', title='Tabanan', actions=[
