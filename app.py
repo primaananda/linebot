@@ -127,7 +127,7 @@ def handle_text_message(event):
                 MessageAction(label='grapari renon', text='grapari renon')
             ]),
             CarouselColumn(text='Daftar grapari wilayah Bangli', title='Bangli', actions=[
-                PostbackAction(label='Status Grapari', data='tidak terdapat Grapari', text=' '),
+                PostbackAction(label='Status Grapari', data='tidak terdapat Grapari di Bangli', text=' '),
                 MessageAction(label=' ', text=' ')
             ]),
             CarouselColumn(text='Daftar grapari wilayah Buleleng', title='Buleleng', actions=[
@@ -545,9 +545,9 @@ def handle_postback(event):
     elif event.postback.data == 'date_postback':
         line_bot_api.reply_message(
             event.reply_token, TextSendMessage(text=event.postback.params['date']))
-    elif event.postback.data == 'tidak terdapat Grapari':
+    elif event.postback.data == 'tidak terdapat Grapari di Bangli':
         line_bot_api.reply_message(
-            event.reply_token, TextSendMessage(text='Mohon Maaf Belum ada Grapari di Wilayah ini.'))
+            event.reply_token, TextSendMessage(text='Mohon Maaf Belum ada Grapari di Wilayah Bangli.'))
 
 
 @handler.add(BeaconEvent)
