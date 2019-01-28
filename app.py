@@ -127,7 +127,7 @@ def handle_text_message(event):
                 MessageAction(label='grapari renon', text='grapari renon')
             ]),
             CarouselColumn(text='Daftar grapari wilayah Bangli', title='Bangli', actions=[
-                PostbackAction(label='Status Grapari', data='tidak terdapat Grapari', text=''),
+                PostbackAction(label='Status Grapari', data='tidak terdapat Grapari', text=' '),
                 MessageAction(label=' ', text=' ')
             ]),
             CarouselColumn(text='Daftar grapari wilayah Buleleng', title='Buleleng', actions=[
@@ -562,7 +562,7 @@ def handle_beacon(event):
 if __name__ == "__main__":
     #run mode
     port = int(os.environ.get('PORT', 5000))
-    app.run(host='0.0.0.0', port=port)
+    # app.run(host='0.0.0.0', port=port)
 
     #debug mode
     arg_parser = ArgumentParser(
@@ -575,4 +575,4 @@ if __name__ == "__main__":
     # create tmp dir for download content
     make_static_tmp_dir()
 
-    # app.run(debug=options.debug, port=options.port)
+    app.run(debug=options.debug, port=options.port)
