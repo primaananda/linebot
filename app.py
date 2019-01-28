@@ -127,7 +127,7 @@ def handle_text_message(event):
                 MessageAction(label='grapari renon', text='grapari renon')
             ]),
             CarouselColumn(text='Daftar grapari wilayah Bangli', title='Bangli', actions=[
-                MessageAction(label=' ', text=' '),
+                PostbackAction(label='Status Grapari', data='No Grapari' text=' '),
                 MessageAction(label=' ', text=' ')
             ]),
             CarouselColumn(text='Daftar grapari wilayah Buleleng', title='Buleleng', actions=[
@@ -135,7 +135,7 @@ def handle_text_message(event):
                 MessageAction(label=' ', text=' ')
             ]),
             CarouselColumn(text='Daftar grapari wilayah Gianyar', title='Gianyar', actions=[
-                MessageAction(label='ping with text', text='ping'),
+                MessageAction(label='grapari Gianyar', text='grapari gianyar'),
                 MessageAction(label='Translate Rice', text='米')
             ]),
             CarouselColumn(text='Daftar grapari wilayah Jembrana', title='Jembrana', actions=[
@@ -186,6 +186,36 @@ def handle_text_message(event):
                 address='Jl. A. Yani No.72, Kaliuntu, Kec. Buleleng, Kabupaten Buleleng, Bali 81114',
                 latitude=-8.111648,
                 longitude=115.085734
+                )
+            ])
+    elif text=='grapari gianyar':
+        line_bot_api.reply_message(
+            event.reply_token,[
+                LocationSendMessage(
+                title='My GraPARI Gianyar',
+                address='Jl. A. Yani No.72, Kaliuntu, Kec. Buleleng, Kabupaten Buleleng, Bali 81114',
+                latitude=-8.111648,
+                longitude=115.085734
+                )
+            ])
+    elif text=='grapari mbg':
+        line_bot_api.reply_message(
+            event.reply_token,[
+                LocationSendMessage(
+                title='My graPARI Mall Bali Galeria',
+                address='JL. by Pass I Gusti Ngurah Rai , 80361 Denpasar , Bali, Kuta, Badung Regency, Bali 80361',
+                latitude=-8.723316,
+                longitude=115.184888
+                )
+            ])
+    elif text=='grapari karangasem':
+        line_bot_api.reply_message(
+            event.reply_token,[
+                LocationSendMessage(
+                title='My graPARI Karangasem',
+                address='Jl. PB. Sudirman 98 C, Amlapura, Kecamatan Karangasem, Subagan, Kec. Karangasem, Kabupaten Karangasem, Bali 80811',
+                latitude=-8.451645,
+                longitude=115.603835
                 )
             ])
         # grapari_carousel_template = CarouselTemplate(columns=[
@@ -515,46 +545,9 @@ def handle_postback(event):
     elif event.postback.data == 'date_postback':
         line_bot_api.reply_message(
             event.reply_token, TextSendMessage(text=event.postback.params['date']))
-    elif event.postback.data == 'grapari karangasem':
+    elif event.postback.data == 'No Grapari':
         line_bot_api.reply_message(
-            event.reply_token,[
-                LocationSendMessage(
-                title='graPARI Telkomsel Karangasem',
-                address='Jl. PB. Sudirman 98 C, Amlapura, Kecamatan Karangasem, Subagan, Kec. Karangasem, Kabupaten Karangasem, Bali 80811',
-                latitude=-8.451645,
-                longitude=115.603835
-                )
-            ])
-    elif event.postback.data == 'grapari mbg':
-        line_bot_api.reply_message(
-            event.reply_token,[
-                LocationSendMessage(
-                title='Grapari Telkomsel MBG',
-                address='JL. by Pass I Gusti Ngurah Rai , 80361 Denpasar , Bali, Kuta, Badung Regency, Bali 80361',
-                latitude=-8.723316,
-                longitude=115.184888
-                )
-            ])
-    # elif event.postback.data == 'grapari teuku umar':
-    #     line_bot_api.reply_message(
-    #         event.reply_token,[
-    #             LocationSendMessage(
-    #             title='My GraPARI Denpasar Teuku Umar',
-    #             address='Jl. Teuku Umar No.6, Dauh Puri Klod, Denpasar Bar., Kota Denpasar, Bali 80114',
-    #             latitude=-8.669041,
-    #             longitude=115.214185
-    #             )
-    #         ])
-    # elif event.postback.data == 'grapari renon':
-    #     line_bot_api.reply_message(
-    #         event.reply_token,[
-    #             LocationSendMessage(
-    #             title='My GraPARI Denpasar Renon',
-    #             address='Jl. Raya Puputan No.33, Panjer, Denpasar Sel., Kota Denpasar, Bali 80234',
-    #             latitude=-8.672262,
-    #             longitude=115.228615
-    #             )
-    #         ])
+            event.reply_token, TextSendMessage(text='Mohon Maaf Belum ada Grapari di Wilayah ini.'))
 
 
 @handler.add(BeaconEvent)
