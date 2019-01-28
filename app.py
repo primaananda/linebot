@@ -127,7 +127,7 @@ def handle_text_message(event):
                 MessageAction(label='grapari renon', text='grapari renon')
             ]),
             CarouselColumn(text='Daftar grapari wilayah Bangli', title='Bangli', actions=[
-                PostbackAction(label='Status Grapari', data='No Grapari' text='No Grapari'),
+                PostbackAction(label='Status Grapari', data='tidak terdapat Grapari', text=''),
                 MessageAction(label=' ', text=' ')
             ]),
             CarouselColumn(text='Daftar grapari wilayah Buleleng', title='Buleleng', actions=[
@@ -545,7 +545,7 @@ def handle_postback(event):
     elif event.postback.data == 'date_postback':
         line_bot_api.reply_message(
             event.reply_token, TextSendMessage(text=event.postback.params['date']))
-    elif event.postback.data == 'No Grapari':
+    elif event.postback.data == 'tidak terdapat Grapari':
         line_bot_api.reply_message(
             event.reply_token, TextSendMessage(text='Mohon Maaf Belum ada Grapari di Wilayah ini.'))
 
@@ -560,5 +560,19 @@ def handle_beacon(event):
 
 
 if __name__ == "__main__":
+    #run mode
     port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port)
+
+    #debug mode
+    arg_parser = ArgumentParser(
+        usage='Usage: python ' + __file__ + ' [--port <port>] [--help]'
+    )
+    arg_parser.add_argument('-p', '--port', type=int, default=8000, help='port')
+    arg_parser.add_argument('-d', '--debug', default=False, help='debug')
+    options = arg_parser.parse_args()
+
+    # create tmp dir for download content
+    make_static_tmp_dir()
+
+    # app.run(debug=options.debug, port=options.port)
