@@ -139,10 +139,8 @@ def handle_text_message(event):
                 MessageAction(label=' ', text=' ')
             ]),
             CarouselColumn(text='Daftar grapari wilayah Jembrana', title='Jembrana', actions=[
-                PostbackAction(label='Status Grapari', data='tidak terdapat Grapari di Bangli', text=' '),
+                MessageAction(label='graPARI Telkomsel Negara', text='grapari negara'),
                 MessageAction(label=' ', text=' ')
-                # MessageAction(label='graPARI Telkomsel Negara', text='grapari negara'),
-                # MessageAction(label=' ', text=' ')
             ]),
             CarouselColumn(text='Daftar grapari wilayah Karangasem', title='Karangasem', actions=[
                 PostbackAction(label='Status Grapari', data='tidak terdapat Grapari di Bangli', text=' '),
