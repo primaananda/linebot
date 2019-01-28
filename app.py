@@ -213,7 +213,7 @@ def handle_text_message(event):
             event.reply_token,[
                 LocationSendMessage(
                 title='My graPARI Karangasem',
-                address='Jl. PB. Sudirman 98 C, Amlapura, Kecamatan Karangasem, Kabupaten Karangasem, Bali 80811',
+                address='Jl. PB. Sudirman 98 C, Amlapura, Kecamatan Karangasem, Kab. Karangasem, Bali 80811',
                 latitude=-8.451645,
                 longitude=115.603835
                 )
