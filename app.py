@@ -143,22 +143,16 @@ def handle_text_message(event):
                 MessageAction(label=' ', text=' ')
             ]),
             CarouselColumn(text='Daftar grapari wilayah Karangasem', title='Karangasem', actions=[
-                PostbackAction(label='Status Grapari', data='tidak terdapat Grapari di Bangli', text=' '),
+                MessageAction(label='graPARI Karangasem', text='grapari karangasem'),
                 MessageAction(label=' ', text=' ')
-                # MessageAction(label='graPARI Karangasem', text='grapari karangasem'),
-                # MessageAction(label=' ', text=' ')
             ]),
             CarouselColumn(text='Daftar grapari wilayah Klungkung', title='Klungkung', actions=[
-                PostbackAction(label='Status Grapari', data='tidak terdapat Grapari di Bangli', text=' '),
+                MessageAction(label='Status Grapari', text='grapari klungkung'),
                 MessageAction(label=' ', text=' ')
-                # MessageAction(label='Status Grapari', text='grapari klungkung'),
-                # MessageAction(label=' ', text=' ')
             ]),
             CarouselColumn(text='Daftar grapari wilayah Tabanan', title='Tabanan', actions=[
-                PostbackAction(label='Status Grapari', data='tidak terdapat Grapari di Bangli', text=' '),
+                MessageAction(label='Grapari Tabanan', text='grapari tabanan'),
                 MessageAction(label=' ', text=' ')
-                # MessageAction(label='Grapari Tabanan', text='grapari tabanan'),
-                # MessageAction(label=' ', text=' ')
             ]),
         ])
         template_message = TemplateSendMessage(
