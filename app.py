@@ -131,28 +131,40 @@ def handle_text_message(event):
                 MessageAction(label=' ', text=' ')
             ]),
             CarouselColumn(text='Daftar grapari wilayah Buleleng', title='Buleleng', actions=[
-                MessageAction(label='grapari Buleleng', text='grapari buleleng'),
+                PostbackAction(label='Status Grapari', data='tidak terdapat Grapari di Bangli', text=' '),
                 MessageAction(label=' ', text=' ')
+                # MessageAction(label='grapari Buleleng', text='grapari buleleng'),
+                # MessageAction(label=' ', text=' ')
             ]),
             CarouselColumn(text='Daftar grapari wilayah Gianyar', title='Gianyar', actions=[
-                MessageAction(label='grapari Gianyar', text='grapari gianyar'),
+                PostbackAction(label='Status Grapari', data='tidak terdapat Grapari di Bangli', text=' '),
                 MessageAction(label=' ', text=' ')
+                # MessageAction(label='grapari Gianyar', text='grapari gianyar'),
+                # MessageAction(label=' ', text=' ')
             ]),
             CarouselColumn(text='Daftar grapari wilayah Jembrana', title='Jembrana', actions=[
-                MessageAction(label='graPARI Telkomsel Negara', text='grapari negara'),
+                PostbackAction(label='Status Grapari', data='tidak terdapat Grapari di Bangli', text=' '),
                 MessageAction(label=' ', text=' ')
+                # MessageAction(label='graPARI Telkomsel Negara', text='grapari negara'),
+                # MessageAction(label=' ', text=' ')
             ]),
             CarouselColumn(text='Daftar grapari wilayah Karangasem', title='Karangasem', actions=[
-                MessageAction(label='graPARI Karangasem', text='grapari karangasem'),
+                PostbackAction(label='Status Grapari', data='tidak terdapat Grapari di Bangli', text=' '),
                 MessageAction(label=' ', text=' ')
+                # MessageAction(label='graPARI Karangasem', text='grapari karangasem'),
+                # MessageAction(label=' ', text=' ')
             ]),
             CarouselColumn(text='Daftar grapari wilayah Klungkung', title='Klungkung', actions=[
-                MessageAction(label='Status Grapari', text='grapari klungkung'),
+                PostbackAction(label='Status Grapari', data='tidak terdapat Grapari di Bangli', text=' '),
                 MessageAction(label=' ', text=' ')
+                # MessageAction(label='Status Grapari', text='grapari klungkung'),
+                # MessageAction(label=' ', text=' ')
             ]),
             CarouselColumn(text='Daftar grapari wilayah Tabanan', title='Tabanan', actions=[
-                MessageAction(label='Grapari Tabanan', text='grapari tabanan'),
+                PostbackAction(label='Status Grapari', data='tidak terdapat Grapari di Bangli', text=' '),
                 MessageAction(label=' ', text=' ')
+                # MessageAction(label='Grapari Tabanan', text='grapari tabanan'),
+                # MessageAction(label=' ', text=' ')
             ]),
         ])
         template_message = TemplateSendMessage(
