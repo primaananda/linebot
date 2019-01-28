@@ -135,10 +135,8 @@ def handle_text_message(event):
                 MessageAction(label=' ', text=' ')
             ]),
             CarouselColumn(text='Daftar grapari wilayah Gianyar', title='Gianyar', actions=[
-                PostbackAction(label='Status Grapari', data='tidak terdapat Grapari di Bangli', text=' '),
+                MessageAction(label='grapari Gianyar', text='grapari gianyar'),
                 MessageAction(label=' ', text=' ')
-                # MessageAction(label='grapari Gianyar', text='grapari gianyar'),
-                # MessageAction(label=' ', text=' ')
             ]),
             CarouselColumn(text='Daftar grapari wilayah Jembrana', title='Jembrana', actions=[
                 PostbackAction(label='Status Grapari', data='tidak terdapat Grapari di Bangli', text=' '),
