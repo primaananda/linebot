@@ -238,15 +238,15 @@ def handle_text_message(event):
                 longitude=115.135258
                 )
             ])
-    elif text == 'info grapari denpasar':
+    elif text == 'flexx':
         bubble = BubbleContainer(
             direction='ltr',
             hero=ImageComponent(
-                url='bit.ly/2Tl2mtI',
+                url='https://example.com/cafe.jpg',
                 size='full',
                 aspect_ratio='20:13',
                 aspect_mode='cover',
-                action=URIAction(uri='bit.ly/2Tl2mtI', label='grapari')
+                action=URIAction(uri='http://example.com', label='label')
             ),
             body=BoxComponent(
                 layout='vertical',
