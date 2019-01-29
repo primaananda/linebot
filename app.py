@@ -238,15 +238,15 @@ def handle_text_message(event):
                 longitude=115.135258
                 )
             ])
-    elif text == 'info grapari denpasar': #flex message
+    elif text == 'info grapari denpasar':
         bubble = BubbleContainer(
             direction='ltr',
             hero=ImageComponent(
-                url='http://bit.ly/2Tl2mtI',
+                url='bit.ly/2Tl2mtI',
                 size='full',
                 aspect_ratio='20:13',
                 aspect_mode='cover',
-                action=URIAction(uri='http://bit.ly/2Tl2mtI', label='label')
+                action=URIAction(uri='bit.ly/2Tl2mtI', label='grapari')
             ),
             body=BoxComponent(
                 layout='vertical',
@@ -678,7 +678,7 @@ if __name__ == "__main__":
     port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port)
 
-    ##debug mode
+    #debug mode
     # arg_parser = ArgumentParser(
     #     usage='Usage: python ' + __file__ + ' [--port <port>] [--help]'
     # )
