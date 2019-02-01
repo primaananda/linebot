@@ -305,7 +305,7 @@ def handle_text_message(event):
                                         text='No. Telp',
                                         color='#aaaaaa',
                                         size='sm',
-                                        flex=2
+                                        flex=3
                                     ),
                                     TextComponent(
                                         text="0811-3940-500",
@@ -328,15 +328,17 @@ def handle_text_message(event):
                     SpacerComponent(size='sm'),
                     # callAction
                     ButtonComponent(
-                        style='link',
+                        style='primary',
+                        color='#00b300',
                         height='sm',
-                        action=URIAction(label='CALL', uri='tel:08113940500'),
+                        action=URIAction(label='Call', uri='tel:08113940500'),
                     ),
                     # separator
                     SeparatorComponent(),
                     # websiteAction
                     ButtonComponent(
-                        style='link',
+                        style='primary',
+                        color='#ffffff',
                         height='sm',
                         action=PostbackAction(label='Alamat GraPARI', data='alamat grapari teuku umar', text='alamat grapari teuku umar')
                     )
