@@ -270,7 +270,7 @@ def handle_text_message(event):
                                         flex=2
                                     ),
                                     TextComponent(
-                                        text='GraPARI Telkomsel Plasa Telkom, Jl. Teuku Umar No.6, Dauh Puri Klod, Denpasar Bar., Kota Denpasar, Bali 80114',
+                                        text='Jl. Teuku Umar No.6, Dauh Puri Klod, Denpasar Bar., Kota Denpasar, Bali 80114',
                                         wrap=True,
                                         color='#666666',
                                         size='sm',
@@ -283,13 +283,13 @@ def handle_text_message(event):
                                 spacing='sm',
                                 contents=[
                                     TextComponent(
-                                        text='Time',
+                                        text='Waktu Buka',
                                         color='#aaaaaa',
                                         size='sm',
-                                        flex=1
+                                        flex=3
                                     ),
                                     TextComponent(
-                                        text="10:00 - 23:00",
+                                        text="Senin, 08.00–17.00 Wita/n Selasa, 08.00–17.00 Wita/n Rabu, 08.00–17.00 Wita/n Kamis, 08.00–17.00 Wita/n Jumat, 08.00–17.00 Wita/n Sabtu, 08.00–12.00 Wita/n Minggu, Tutup",
                                         wrap=True,
                                         color='#666666',
                                         size='sm',
