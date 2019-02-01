@@ -47,7 +47,7 @@ def make_static_tmp_dir():
             pass
         else:
             raise
-            
+
 @app.route("/callback", methods=['POST'])
 def callback():
     # Get X-Line-Signature header value
@@ -75,7 +75,7 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_text_message(event):
     text = (event.message.text).lower()
-        
+
     if text == 'profile':
         if isinstance(event.source, SourceUser):
             profile = line_bot_api.get_profile(event.source.user_id)
@@ -123,7 +123,7 @@ def handle_text_message(event):
     elif text == 'cari info grapari' or text == 'cari grapari' or text == 'grapari':
         carousel_template = CarouselTemplate(columns=[
             CarouselColumn(text='Daftar grapari wilayah Denpasar', title='Denpasar', actions=[
-                MessageAction(label='Grapari Geuku Umar', text='grapari teuku umar'),
+                MessageAction(label='Grapari Teuku Umar', text='grapari teuku umar'),
                 MessageAction(label='grapari renon', text='grapari renon')
             ]),
             CarouselColumn(text='Daftar grapari wilayah Bangli', title='Bangli', actions=[
