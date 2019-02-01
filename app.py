@@ -289,7 +289,7 @@ def handle_text_message(event):
                                         flex=3
                                     ),
                                     TextComponent(
-                                        text="Senin, 08.00–17.00\n Selasa, 08.00–17.00\n Rabu, 08.00–17.00\n Kamis, 08.00–17.00\n Jumat, 08.00–17.00\n Sabtu, 08.00–12.00\n Minggu, Tutup",
+                                        text="Senin, 08.00–17.00\nSelasa, 08.00–17.00\nRabu, 08.00–17.00\nKamis, 08.00–17.00\nJumat, 08.00–17.00\nSabtu, 08.00–12.00\nMinggu, Tutup",
                                         wrap=True,
                                         color='#666666',
                                         size='sm',
