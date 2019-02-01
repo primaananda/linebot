@@ -267,7 +267,7 @@ def handle_text_message(event):
                                         text='Alamat',
                                         color='#aaaaaa',
                                         size='sm',
-                                        flex=2
+                                        flex=3
                                     ),
                                     TextComponent(
                                         text='Jl. Teuku Umar No.6, Dauh Puri Klod, Denpasar Bar., Kota Denpasar, Bali 80114',
@@ -286,14 +286,14 @@ def handle_text_message(event):
                                         text="Waktu\nBuka",
                                         color='#aaaaaa',
                                         size='sm',
-                                        flex=2
+                                        flex=3
                                     ),
                                     TextComponent(
-                                        text="Senin, 08.00–17.00 Wita\n Selasa, 08.00–17.00 Wita\n Rabu, 08.00–17.00 Wita\n Kamis, 08.00–17.00 Wita\n Jumat, 08.00–17.00 Wita\n Sabtu, 08.00–12.00 Wita\n Minggu, Tutup",
+                                        text="Senin, 08.00–17.00\n Selasa, 08.00–17.00\n Rabu, 08.00–17.00\n Kamis, 08.00–17.00\n Jumat, 08.00–17.00\n Sabtu, 08.00–12.00\n Minggu, Tutup",
                                         wrap=True,
                                         color='#666666',
                                         size='sm',
-                                        flex=5,
+                                        flex=4,
                                     ),
                                 ],
                             ),
