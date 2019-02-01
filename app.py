@@ -242,11 +242,11 @@ def handle_text_message(event):
         bubble = BubbleContainer(
             direction='ltr',
             hero=ImageComponent(
-                url='https://example.com/cafe.jpg',
+                url='https://imgur.com/a/PtihNc1',
                 size='full',
                 aspect_ratio='20:13',
                 aspect_mode='cover',
-                action=URIAction(uri='https://example.com/cafe.jpg', label='label')
+                action=URIAction(uri='https://imgur.com/a/PtihNc1', label='label')
             ),
             body=BoxComponent(
                 layout='vertical',
