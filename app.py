@@ -305,14 +305,14 @@ def handle_text_message(event):
                                         text='No. Telp',
                                         color='#aaaaaa',
                                         size='sm',
-                                        flex=3
+                                        flex=2
                                     ),
                                     TextComponent(
                                         text="0811-3940-500",
                                         wrap=True,
                                         color='#666666',
                                         size='sm',
-                                        flex=4,
+                                        flex=5,
                                     ),
                                 ],
                             ),
