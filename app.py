@@ -286,7 +286,7 @@ def handle_text_message(event):
                                         text='Waktu\nBuka',
                                         color='#aaaaaa',
                                         size='sm',
-                                        flex=2
+                                        flex=2.5
                                     ),
                                     TextComponent(
                                         text="Senin, 08.00–17.00 Wita\n Selasa, 08.00–17.00 Wita\n Rabu, 08.00–17.00 Wita\n Kamis, 08.00–17.00 Wita\n Jumat, 08.00–17.00 Wita\n Sabtu, 08.00–12.00 Wita\n Minggu, Tutup",
