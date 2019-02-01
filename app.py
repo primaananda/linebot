@@ -333,8 +333,6 @@ def handle_text_message(event):
                         height='sm',
                         action=URIAction(label='Call', uri='tel:08113940500'),
                     ),
-                    # separator
-                    SeparatorComponent(),
                     # websiteAction
                     ButtonComponent(
                         style='secondary',
@@ -464,7 +462,7 @@ def handle_text_message(event):
                 layout='vertical',
                 spacing='sm',
                 contents=[
-                    # callAction, separator, websiteAction
+                    # callAction, alamatAction
                     SpacerComponent(size='sm'),
                     # callAction
                     ButtonComponent(
@@ -472,9 +470,7 @@ def handle_text_message(event):
                         height='sm',
                         action=URIAction(label='CALL', uri='tel:000000'),
                     ),
-                    # separator
-                    SeparatorComponent(),
-                    # websiteAction
+                    # alamatAction
                     ButtonComponent(
                         style='link',
                         height='sm',
