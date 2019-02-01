@@ -253,20 +253,6 @@ def handle_text_message(event):
                 contents=[
                     # title
                     TextComponent(text='My GraPARI Teuku Umar', weight='bold', size='xl'),
-                    # # review
-                    # BoxComponent(
-                    #     layout='baseline',
-                    #     margin='md',
-                    #     contents=[
-                    #         IconComponent(size='sm', url='https://example.com/gold_star.png'),
-                    #         IconComponent(size='sm', url='https://example.com/grey_star.png'),
-                    #         IconComponent(size='sm', url='https://example.com/gold_star.png'),
-                    #         IconComponent(size='sm', url='https://example.com/gold_star.png'),
-                    #         IconComponent(size='sm', url='https://example.com/grey_star.png'),
-                    #         TextComponent(text='4.0', size='sm', color='#999999', margin='md',
-                    #                       flex=0)
-                    #     ]
-                    # ),
                     # info
                     BoxComponent(
                         layout='vertical',
@@ -278,13 +264,13 @@ def handle_text_message(event):
                                 spacing='sm',
                                 contents=[
                                     TextComponent(
-                                        text='Place',
+                                        text='Alamat',
                                         color='#aaaaaa',
                                         size='sm',
                                         flex=1
                                     ),
                                     TextComponent(
-                                        text='Shinjuku, Tokyo',
+                                        text='GraPARI Telkomsel Plasa Telkom, Jl. Teuku Umar No.6, Dauh Puri Klod, Denpasar Bar., Kota Denpasar, Bali 80114',
                                         wrap=True,
                                         color='#666666',
                                         size='sm',
