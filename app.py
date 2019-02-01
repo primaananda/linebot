@@ -337,8 +337,7 @@ def handle_text_message(event):
                     SeparatorComponent(),
                     # websiteAction
                     ButtonComponent(
-                        style='primary',
-                        color='#ffffff',
+                        style='secondary',
                         height='sm',
                         action=PostbackAction(label='Alamat GraPARI', data='alamat grapari teuku umar', text='alamat grapari teuku umar')
                     )
