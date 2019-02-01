@@ -283,13 +283,32 @@ def handle_text_message(event):
                                 spacing='sm',
                                 contents=[
                                     TextComponent(
-                                        text="Waktu\nBuka",
+                                        text="Waktu Buka",
                                         color='#aaaaaa',
                                         size='sm',
                                         flex=3
                                     ),
                                     TextComponent(
                                         text="Senin, 08.00–17.00\n Selasa, 08.00–17.00\n Rabu, 08.00–17.00\n Kamis, 08.00–17.00\n Jumat, 08.00–17.00\n Sabtu, 08.00–12.00\n Minggu, Tutup",
+                                        wrap=True,
+                                        color='#666666',
+                                        size='sm',
+                                        flex=5,
+                                    ),
+                                ],
+                            ),
+                            BoxComponent(
+                                layout='baseline',
+                                spacing='sm',
+                                contents=[
+                                    TextComponent(
+                                        text='No. Telp',
+                                        color='#aaaaaa',
+                                        size='sm',
+                                        flex=3
+                                    ),
+                                    TextComponent(
+                                        text="0811-3940-500",
                                         wrap=True,
                                         color='#666666',
                                         size='sm',
@@ -311,7 +330,7 @@ def handle_text_message(event):
                     ButtonComponent(
                         style='link',
                         height='sm',
-                        action=URIAction(label='CALL', uri='tel:000000'),
+                        action=URIAction(label='CALL', uri='tel:08113940500'),
                     ),
                     # separator
                     SeparatorComponent(),
@@ -319,7 +338,7 @@ def handle_text_message(event):
                     ButtonComponent(
                         style='link',
                         height='sm',
-                        action=URIAction(label='WEBSITE', uri="https://example.com")
+                        action=PostbackAction(label='Alamat GraPARI', data='alamat grapari teuku umar', text='alamat grapari teuku umar')
                     )
                 ]
             ),
