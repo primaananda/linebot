@@ -238,21 +238,21 @@ def handle_text_message(event):
                 longitude=115.135258
                 )
             ])
-    elif text == 'flexx':
+    elif text == 'grapari teuku umar':
         bubble = BubbleContainer(
             direction='ltr',
             hero=ImageComponent(
-                url='https://i.imgur.com/Cr3Glrs.jpg',
+                url='https://i.imgur.com/G18bDUi.jpg',
                 size='full',
                 aspect_ratio='20:13',
                 aspect_mode='cover',
-                action=URIAction(uri='https://i.imgur.com/Cr3Glrs.jpg', label='label')
+                action=URIAction(uri='https://i.imgur.com/G18bDUi.jpg', label='label')
             ),
             body=BoxComponent(
                 layout='vertical',
                 contents=[
                     # title
-                    TextComponent(text='Brown Cafe', weight='bold', size='xl'),
+                    TextComponent(text='graPARI Teuku Umar', weight='bold', size='xl'),
                     # review
                     BoxComponent(
                         layout='baseline',
