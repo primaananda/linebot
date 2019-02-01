@@ -242,11 +242,11 @@ def handle_text_message(event):
         bubble = BubbleContainer(
             direction='ltr',
             hero=ImageComponent(
-                url='bit.ly/2Tl2mtI',
+                url='http://4.bp.blogspot.com/-FWCBLM2ElEM/VRkD1nKxyvI/AAAAAAAAF2w/jmwYFk49yBQ/s1600/grapariteukuumar3.jpg',
                 size='full',
                 aspect_ratio='20:13',
                 aspect_mode='cover',
-                action=URIAction(uri='bit.ly/2Tl2mtI', label='label')
+                action=URIAction(uri=' ', label='label')
             ),
             body=BoxComponent(
                 layout='vertical',
