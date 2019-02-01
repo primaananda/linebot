@@ -253,20 +253,20 @@ def handle_text_message(event):
                 contents=[
                     # title
                     TextComponent(text='My GraPARI Teuku Umar', weight='bold', size='xl'),
-                    # review
-                    BoxComponent(
-                        layout='baseline',
-                        margin='md',
-                        contents=[
-                            IconComponent(size='sm', url='https://example.com/gold_star.png'),
-                            IconComponent(size='sm', url='https://example.com/grey_star.png'),
-                            IconComponent(size='sm', url='https://example.com/gold_star.png'),
-                            IconComponent(size='sm', url='https://example.com/gold_star.png'),
-                            IconComponent(size='sm', url='https://example.com/grey_star.png'),
-                            TextComponent(text='4.0', size='sm', color='#999999', margin='md',
-                                          flex=0)
-                        ]
-                    ),
+                    # # review
+                    # BoxComponent(
+                    #     layout='baseline',
+                    #     margin='md',
+                    #     contents=[
+                    #         IconComponent(size='sm', url='https://example.com/gold_star.png'),
+                    #         IconComponent(size='sm', url='https://example.com/grey_star.png'),
+                    #         IconComponent(size='sm', url='https://example.com/gold_star.png'),
+                    #         IconComponent(size='sm', url='https://example.com/gold_star.png'),
+                    #         IconComponent(size='sm', url='https://example.com/grey_star.png'),
+                    #         TextComponent(text='4.0', size='sm', color='#999999', margin='md',
+                    #                       flex=0)
+                    #     ]
+                    # ),
                     # info
                     BoxComponent(
                         layout='vertical',
