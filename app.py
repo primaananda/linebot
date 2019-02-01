@@ -267,7 +267,7 @@ def handle_text_message(event):
                                         text='Alamat',
                                         color='#aaaaaa',
                                         size='sm',
-                                        flex=1
+                                        flex=2
                                     ),
                                     TextComponent(
                                         text='GraPARI Telkomsel Plasa Telkom, Jl. Teuku Umar No.6, Dauh Puri Klod, Denpasar Bar., Kota Denpasar, Bali 80114',
