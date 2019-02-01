@@ -252,7 +252,7 @@ def handle_text_message(event):
                 layout='vertical',
                 contents=[
                     # title
-                    TextComponent(text='graPARI Teuku Umar', weight='bold', size='xl'),
+                    TextComponent(text='My GraPARI Teuku Umar', weight='bold', size='xl'),
                     # review
                     BoxComponent(
                         layout='baseline',
