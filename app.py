@@ -242,7 +242,7 @@ def handle_text_message(event):
         bubble = BubbleContainer(
             direction='ltr',
             hero=ImageComponent(
-                url='http://4.bp.blogspot.com/-FWCBLM2ElEM/VRkD1nKxyvI/AAAAAAAAF2w/jmwYFk49yBQ/s1600/grapariteukuumar3.jpg',
+                url=' ',
                 size='full',
                 aspect_ratio='20:13',
                 aspect_mode='cover',
